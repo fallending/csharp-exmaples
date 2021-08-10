@@ -16,7 +16,7 @@ namespace testbyseven
     {
       Console.WriteLine("Hello World!");
 
-      Console.WriteLine(ConvertString(GetLog()));
+      Console.WriteLine(ConvertStringV2(GetLog()));
     }
 
     private static string ConvertString(IntPtr data, bool utf8 = true)
@@ -30,5 +30,16 @@ namespace testbyseven
       Marshal.Copy(data, bytes, 0, length);
       return System.Text.Encoding.UTF8.GetString(bytes);
     }
+
+    private static string ConvertStringV2(IntPtr data, bool utf8 = true)
+    {
+      if (utf8)
+      {
+        return Marshal.PtrToStringUTF8(data);
+      }
+
+      return Marshal.PtrToStringAnsi(data);
+    }
   }
+
 }
