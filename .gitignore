@@ -9,3 +9,4 @@ using-dylib/lib/CTestTestfile.cmake
 using-dylib/lib/DartConfiguration.tcl
 using-dylib/lib/Makefile
 using-dylib/lib/build
+.vs
