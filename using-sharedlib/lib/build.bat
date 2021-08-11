@@ -18,6 +18,7 @@ if exist VSProject2019 (
 
 cmake -B "VSProject2019" "sdk/core" ..
 cmake --build "VSProject2019" --target "stringutil" --config=debug --parallel || echo "Compile Failed!" && exit /b
+cmake --build "VSProject2019" --target "stringutil" --config=release --parallel || echo "Compile Failed!" && exit /b
 
 cd ..
 rm -rf ..\bin\Debug/\netcoreapp3.1\stringutil.dll
