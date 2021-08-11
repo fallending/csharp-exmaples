@@ -1,5 +1,9 @@
 # csharp-exmaples
 C sharp examples
 
-* using-dylib：Mac下基于VSCode如何在cs中调用.dylib～
+* using-sharedlib：C#调用DLL/dylib示例
   * 依赖：dotnet，cmake
+  * 运行：
+    * 安装cmake
+    * windows环境运行 build.bat, mac环境运行 build.sh
+    * 运行 testbyseven.csproj
